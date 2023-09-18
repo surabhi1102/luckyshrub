@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+
+
+body{
+    background-color: #EDEFEE;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    color: #333;
+    line-height: 1.5;
+}
+
+
+
+
+main {
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+
+
+.content-wrapper {
+    flex: 1;
+}
+.logo {
+    display:block;
+    height: 150px;
+    width:  100px;
+    margin: 0 auto;
+}
+
+.promo{
+
+}
+
+/* Plnt Disply */
+
+.display {
+    margin-top: 2rem;
+    padding: 2rem; /* Add some inner spacing */
+    background-color: #FFFFFF; /* A light background can help this section stand out */
+    border: 1px solid #e1e1e1; /* A subtle border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A light shadow for a lifted look */
+    border-radius: 10px; /* Rounded corners for a more modern look */
+    gap: 1.5rem; /* Spacing between articles if your browser supports the gap property */
+}
+
+.display article {
+    padding: 1rem;
+    background-color: #f6f6f6; /* A light grey background for each article */
+    border-radius: 8px; /* Rounded corners for each article */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.display article:hover {
+    background-color: #e6e6e6; /* Slightly darker grey for hover */
+}
+
+.plant_img {
+    display: block;
+    height: 150px;
+    width: 200px;
+    border-radius: 10px; /* round the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* add a subtle shadow */
+    transition: transform 0.3s, filter 0.3s; /* transition for hover effects */
+    object-fit: cover; /* in case images have different sizes */
+}
+
+
+
+h1{
+    font-size: 3rem;
+}
+
+
+h2{
+    font-size: 2rem;
+}
+
+
+
+nav ul{
+    list-style:none;
+    text-align:center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+section {
+    display:flex;
+}
+
+article{
+    flex:1;
+}
+
+
+/* FOOTER */
+
+footer {
+    flex-shrink: 0;
+    display: flex; /* Center content horizontally */
+    justify-content: space-around;
+    padding: 2rem 5rem; 
+    align-items: center; /* Center content vertically */
+    width: 100%; /* Ensure the footer is full-width */
+    padding: 1rem 0; /* Some vertical padding for better appearance */
+    background-color: #038d61;
+  
+   
+}
+
+
+footer a {
+    color: #f5f5f5;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #038d61;
+}
+
+footer div{
+    flex:1;
+    flex-shrink: 0;
+}
+
+
+.footerlogo{
+    height:80px;
+    width:80px;
+    margin-right: 1rem;
+    margin-left: 2rem;
+    
+
+}
+
+.social-media img{
+
+    width: 50px;
+    height: 50px;
+}
+
+nav { 
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block; /* Makes the entire list centered in combination with the text-align: center on .navigation_bar */
+    
+}
+
+/* Styling for the list items */
+nav li {
+    display: inline-block;
+    margin: 0 20px;
+    text-align: center;
+}
+
+/* Styling for the links */
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+/* Hover effect for the links */
+nav a:hover {
+    background-color: #038d61;
+} 
+
+
+input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.sb {
+    padding: 10px 20px;  /* Vertical and horizontal padding */
+    border: none;        /* Removing default border */
+    border-radius: 5px;  /* Rounded corners */
+    background-color: #34a853;  /* Google's green color */
+    color: #ffffff;     /* White text */
+    font-weight: bold;  /* Bold text */
+    cursor: pointer;    /* Hand cursor on hover */
+    transition: background-color 0.3s;  /* Smooth transition for hover effect */
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 300px; /* Assuming each article is about 300px wide */
+}
+
+.display {
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.plant_img {
+    width: 100%;
+    max-width: 280px; /* Adjust based on your design */
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
