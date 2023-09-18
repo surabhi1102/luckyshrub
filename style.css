@@ -210,11 +210,6 @@ input[type="email"] {
     transition: background-color 0.3s;  /* Smooth transition for hover effect */
 }
 
-.slider-container {
-    position: relative;
-    overflow: hidden;
-    width: 300px; /* Assuming each article is about 300px wide */
-}
 
 .display {
     display: flex;
@@ -237,10 +232,76 @@ input[type="email"] {
     cursor: pointer;
 }
 
-.prev-btn {
-    left: 0;
+
+/* Responsive Media Queries */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+
+    /* Stacking navbar items vertically */
+    nav li {
+        display: block;
+        margin: 8px 0; /* Adding vertical spacing between links */
+    }
+
+    /* Flex items will stack vertically */
+    .display {
+        flex-direction: column;
+        align-items: center; /* Center the items horizontally */
+    }
+
+    /* Adjust the articles inside .display for better spacing */
+    .display article {
+        margin-bottom: 1rem; /* Spacing between articles when they are stacked */
+    }
+
+    /* Adjusting the main content margins for smaller screens */
+    main {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    /* Footer contents to stack vertically */
+    footer {
+        flex-direction: column;
+        align-items: center; /* Center the content horizontally */
+    }
+
+    /* Provide some margin between footer items */
+    footer div {
+        margin-bottom: 1rem;
+    }
 }
 
-.next-btn {
-    right: 0;
+/* For mobile screens */
+@media (max-width: 480px) {
+
+    /* Further reduce main content margins */
+    main {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    /* Heading adjustments for smaller screens */
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust the footer logo size */
+    .footerlogo {
+        height: 60px;
+        width: 60px;
+    }
+
+    /* Adjust social media icon sizes */
+    .social-media img {
+        width: 40px;
+        height: 40px;
+    }
 }
+
+
