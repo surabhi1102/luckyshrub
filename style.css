@@ -275,17 +275,17 @@ input[type="email"] {
 
 /* For mobile screens */
 @media (max-width: 480px) {
-    .navigation_bar {
+    .navigation_bar ul {
         display: flex;
-        flex-direction: row; /* This is the default value for flex-direction, but specified here for clarity */
-        flex-wrap: nowrap;   /* To prevent wrapping of items to the next line */
+        flex-direction: row;
+        padding: 0;           /* Remove default padding */
+        list-style-type: none;/* Remove default bullets */
     }
 
-    /* Optional: If you want spacing between each item */
-    .navigation_bar > * {
-        margin-right: 10px; /* adjust as per your design */
+    .navigation_bar li {
+        margin-right: 10px;   /* Space between each list item */
 
-        /* If you don't want margin on the last item */
+        /* Remove margin on the last item */
         &:last-child {
             margin-right: 0;
         }
