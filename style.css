@@ -276,6 +276,13 @@ input[type="email"] {
 /* For mobile screens */
 @media (max-width: 480px) {
 
+
+    .navigation_bar {
+        display: flex;
+        flex-direction: row; /* This is the default value for flex-direction, but specified here for clarity */
+        flex-wrap: nowrap;   /* To prevent wrapping of items to the next line */
+    }
+
     /* Further reduce main content margins */
     main {
         margin-left: 1rem;
