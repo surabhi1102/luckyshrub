@@ -100,8 +100,10 @@ nav ul{
 }
 
 nav li {
-    display: inline-block;
+    margin: 0 20px;
+    text-align: center;
 }
+
 
 section {
     display:flex;
@@ -234,6 +236,13 @@ input[type="email"] {
 
 
 /* Responsive Media Queries */
+
+/* For devices larger than mobile but smaller than tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    nav li {
+        display: inline-block;
+    }
+}
 
 /* For tablets and smaller screens */
 @media (max-width: 768px) {
