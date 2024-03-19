@@ -81,7 +81,16 @@ main {
     object-fit: cover; /* in case images have different sizes */
 }
 
+.headingtext, h1{ 
+    font-size: 36px;
+    font-weight: bold;
+    color: #038d61; /* Green color for emphasis */
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add spacing between letters for emphasis */
 
+}
 
 h1{
     font-size: 3rem;
@@ -223,16 +232,94 @@ input[type="email"] {
     max-width: 280px; /* Adjust based on your design */
 }
 
-.slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+
+/* Testimonial Card Styles */
+/* Testimonial Box Styles */
+
+
+/* Testimonial Box Styles */
+.testimonial-box {
+    position: relative; /* Ensure relative positioning */
+    margin: 2rem 0;
+    background-color: #F8F8F8; /* Lighter background color for the box */
+    padding: 2rem;
+    border: 1px solid #E1E1E1;
+    transition: all 0.3s ease;
+    display: flex; /* Ensure flex container */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Align items vertically */
 }
+
+
+
+
+.testimonial-box:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-quote {
+    margin-bottom: 1.5rem;
+    color: #555;
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+.testimonial-slide {
+    display: none; /* Hide all testimonials by default */
+}
+
+.testimonial-slide.active {
+    display: block; /* Display only the active testimonial */
+}
+
+
+
+/* Add space and style for the icon button */
+/* Arrow Button Styles */
+#nextBtn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #038d61; /* Arrow color */
+}
+
+/* Quote Symbol */
+.testimonial-box::before {
+    content: "“";
+    font-size: 4rem;
+    color: #038d61; /* The green color from your theme */
+    position: absolute;
+    top: -10px; /* Adjust based on preference */
+    left: 10px;
+    font-family: "Georgia", serif; /* A more cursive/stylized font for the quote symbol */
+    opacity: 0.6;
+}
+
+
+.testimonial-box::after {
+    content: "”";
+    font-size: 4rem;
+    color: #038d61; /* The green color from your theme */
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    font-family: "Georgia", serif;
+    opacity: 0.6;
+}
+
+.testimonial-quote {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #333;
+    text-align: right; /* Align the author's name to the right */
+}
+
+
+
 
 
 /* Responsive Media Queries */
@@ -329,5 +416,7 @@ input[type="email"] {
         height: 40px;
     }
 }
+
+
 
 

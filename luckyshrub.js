@@ -1,26 +1,21 @@
-let sliderIndex = 0;
-const slides = document.querySelectorAll('.display article');
-const prevButton = document.querySelector('.prev-btn');
-const nextButton = document.querySelector('.next-btn');
-const displaySection = document.querySelector('.display');
+document.addEventListener("DOMContentLoaded", function() {
+    const testimonials = document.querySelectorAll(".testimonial-slide");
+    let index = 0; // Index to track the current testimonial
 
-prevButton.addEventListener('click', function() {
-    sliderIndex--;
-    updateSlider();
-});
+    // Show the first testimonial initially
+    testimonials[index].classList.add("active");
 
-nextButton.addEventListener('click', function() {
-    sliderIndex++;
-    updateSlider();
-});
+    function nextTestimonial() {
+        // Hide the current testimonial
+        testimonials[index].classList.remove("active");
 
-function updateSlider() {
-    if(sliderIndex < 0) {
-        sliderIndex = slides.length - 1;
-    } else if(sliderIndex >= slides.length) {
-        sliderIndex = 0;
+        // Move to the next testimonial
+        index = (index + 1) % testimonials.length;
+
+        // Show the next testimonial
+        testimonials[index].classList.add("active");
     }
 
-    const offset = -(sliderIndex * 300); // Assuming each slide is 300px wide
-    displaySection.style.transform = `translateX(${offset}px)`;
-}
+    // Function to cycle through testimonials when the next button is clicked
+    document.getElementById("nextBtn").addEventListener("click", nextTestimonial);
+});
